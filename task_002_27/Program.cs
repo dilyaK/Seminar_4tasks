@@ -1,18 +1,18 @@
 ﻿// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в этом числе.
 
-int numberN = new Random().Next(1, 10000);
-Console.WriteLine($"Ввод числа {numberN}");
-SumDigit(numberN);
 
-void SumDigit(int numberN)
+int sumDigits(int numberA)
 {
     int sum = 0;
-    int digit = 0;
-    while (numberN > 0)
+    while (numberA > 0)
     {
-        digit = numberN % 10;
-        sum = sum + digit;
-        numberN = numberN /= 10;
+        sum = sum + numberA % 10;
+        numberA = numberA / 10;
     }
-    Console.WriteLine($"Сумма цифр в числе равна {sum}");
+    return sum + numberA;
 }
+
+Console.Write("Enter a number: ");
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(sumDigits(numberA));
+

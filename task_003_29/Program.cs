@@ -3,7 +3,10 @@
 // N = 3, получаем массив[6,1,33].
 
 
-void FillArray(int[] numbers) // метод для заполнения массива
+
+void FillArray(int[] numbers) 
+Console.WriteLine($"Enter a number: ");
+
 {
     int length = numbers.Length;
     int index = 0;
