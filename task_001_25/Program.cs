@@ -1,19 +1,15 @@
 ﻿// Напишите метод, который принимает на вход два числа (А и В) и возводит число А в целую степень В.
 
-int numA = ;
-int numB = ;
-Console.WriteLine($"Ввод чисел: A - {numA}, B - {numB}");
-Step(numA, numB);
+Console.WriteLine("Enter a number: ");
+int A = Convert.ToInt32(Console.ReadLine());
 
-void Step(int numA, int numB)
+Console.WriteLine("Enter a power: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+int power = A;
+for (int i = 0; i < B; i++)
 {
-    int result = 1;
-    for (int i = 1; i <= numB; i++)
-    {
-        result = result * numA;
-    }
-
-    Console.WriteLine($"Результат возведения числа {numA} в степень {numB} равен {result}");
+    power = power * A;
 }
 
-
+Console.WriteLine($"The power is: {power}");
