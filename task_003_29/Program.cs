@@ -2,36 +2,23 @@
 // N = 5, получаем массив[1,2,5,7,19];
 // N = 3, получаем массив[6,1,33].
 
+Console.WriteLine("Enter a number: ");
 
+int[] NewArray = RandomArray(Convert.ToInt32(Console.ReadLine()));
 
-void FillArray(int[] numbers) 
-Console.WriteLine($"Enter a number: ");
-
+int[] RandomArray(int N)
 {
-    int length = numbers.Length;
-    int index = 0;
-    while (index < length)
+    int[] array = new int[N];
+    Random rand = new Random();
+    for (int i = 0; i < N; i++)
     {
-        numbers[index] = new
-        index++;
+        array[i] = rand.Next(0, 100);
+        Console.Write(array[i] + " ");
     }
+    return array;
 }
 
-void PrintArray(int[] num) // метод для вывода массива на экран
-{
-    int length = num.Length;
-    int pos = 0;
-    while (pos < length)
-    {
-        Console.Write($"{num[pos]} ");
-        pos++;
-    }
-}
 
-int numberN = new Random().Next(1, 10); // Входные данные
-Console.WriteLine($"Ввод числа {numberN}");
-Console.WriteLine("Полученный массив:");
 
-int[] array = new int[numberN]; // инициализация массива
-FillArray(array);
-PrintArray(array);
+
+ 
